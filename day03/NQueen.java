@@ -10,9 +10,15 @@ public class NQueen {
         if (row == n) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    System.out.print(Board[i][j] ? "Q " : ". ");
+                    System.out.print(Board[i][j] ? "Q " : "__ ");
                 }
                 System.out.println();
+            }
+            try {
+                Thread.sleep(100);
+            } catch (Exception e) {
+                // TODO: handle exception
+                System.err.println(e);
             }
             return 1;
         }
@@ -23,15 +29,8 @@ public class NQueen {
                 Board[row][col] = true;
                 count += solve(row + 1, n);
                 Board[row][col] = false;
-
             }
         }
-        // for (int i = 0; i < n; i++) {
-        // for (int j = 0; j < n; j++) {
-        // System.out.print(Board[i][j] ? "Q " : "__ ");
-        // }
-        // System.out.println();
-        // }
         return count;
     }
 
@@ -61,6 +60,8 @@ public class NQueen {
 
     public static void main(String[] args) {
         NQueen obj = new NQueen();
-        System.out.println(obj.totalNQeens(4));
+        int n = args.length > 0 ? Integer.parseInt(args[0]) : 8;
+        System.out.println(n);
+        System.out.println(obj.totalNQeens(n));
     }
 }

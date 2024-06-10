@@ -3,10 +3,10 @@ public class Permutations {
 
     public static void main(String args[]) {
         String str = "ABC";
-        permutations(str, str.length(), "");
+        obj.permutations(str, str.length(), "");
     }
 
-    public static void permutations(String s, int maxLength, String str) {
+    void permutations(String s, int maxLength, String str) {
         if (str.length() == maxLength) {
             System.out.println(str);
             return;
