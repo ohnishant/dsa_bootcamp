@@ -1,8 +1,11 @@
+package day02;
+
 public class Permutations {
     int count = 0;
 
     public static void main(String args[]) {
         String str = "ABC";
+        Permutations obj = new Permutations();
         obj.permutations(str, str.length(), "");
     }
 

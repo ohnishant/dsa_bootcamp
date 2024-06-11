@@ -1,3 +1,5 @@
+package day04;
+
 class MinMax {
     void minMax(int[] arr) {
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;

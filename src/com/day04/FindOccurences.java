@@ -1,3 +1,5 @@
+package day04;
+
 import java.util.HashMap;
 
 class FindOccurences {

@@ -1,3 +1,5 @@
+package day02;
+
 public class TreeRecursion {
     static void fun(int n) {
         if (n <= 0) {
@@ -5,14 +7,14 @@ public class TreeRecursion {
         }
 
         System.out.println("Pre: " + n);
-        fun(n-1);
+        fun(n - 1);
         System.out.println("Inner: " + n);
-        fun(n-2);
+        fun(n - 2);
         System.out.println("Post: " + n);
     }
 
     public static void main(String args[]) {
         fun(3);
     }
-    
+
 }

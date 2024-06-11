@@ -1,3 +1,5 @@
+package day02;
+
 public class SumDigit {
     public static int sumDigit(int number) {
         int sum = 0;
@@ -7,11 +9,12 @@ public class SumDigit {
         }
         return sum;
     }
+
     public static int recursiveSumDigit(int number) {
         if (number == 0) {
             return 0;
         }
-        return number % 10 + recursiveSumDigit(number/10);
+        return number % 10 + recursiveSumDigit(number / 10);
     }
 
     public static void main(String args[]) {
@@ -19,7 +22,7 @@ public class SumDigit {
         int iterativeResult = sumDigit(number);
         int recursiveResult = recursiveSumDigit(number);
 
-        System.out.println("[Iterative]\tNumber: " + number + " has "+iterativeResult + " sum");
-        System.out.println("[Recursive]\tNumber: " + number+ " has " + recursiveResult + " sum");
+        System.out.println("[Iterative]\tNumber: " + number + " has " + iterativeResult + " sum");
+        System.out.println("[Recursive]\tNumber: " + number + " has " + recursiveResult + " sum");
     }
 }
